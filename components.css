@@ -9,8 +9,64 @@
 }
 
 .hero-content h1 {
+    /* Normal hero heading size (unless you want to keep it bigger) */
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+.elevate-title {
+    font-size: 7rem;
+    line-height: 1.2;
+} 
+
+
+/* 
+   Apple-like gradient text glow with desert titanium. 
+   "Exponential" blur -> 3px, 6px, 12px, 24px, 48px, etc.
+*/
+.gradient-text {
+    display: inline-block;
+    background: linear-gradient(
+        90deg,
+        /* start with bright white */
+        #ffffff 0%,
+        /* move through bluish pastels */
+        #cde5ff 25%,
+        #8cbfff 50%,
+        #4d9fec 75%,
+        /* end with desert titanium */
+        #d2c6b8 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    /* 
+       Multiple layered shadows with roughly exponential 
+       distances from the text.
+    */
+    text-shadow:
+        0 0 3px   rgba(255, 255, 255, 0.8),    /* near text */
+        0 0 6px   rgba(140, 191, 255, 0.7),
+        0 0 12px  rgba(77, 159, 236, 0.6),
+        0 0 24px  rgba(210, 198, 184, 0.4),    /* desert titanium glow */
+        0 0 48px  rgba(210, 198, 184, 0.2);    /* outermost blur */
+
+    /* Animated horizontal motion for the gradient */
+    animation: gradientMove 15s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 .hero-content p {

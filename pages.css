@@ -74,7 +74,13 @@
     font-weight: bold;
 }
 
-/* Contact Page Styles */
+/* Contact Page Specific Styles */
+.contact-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -87,6 +93,13 @@
     border: 1px solid rgba(77, 159, 236, 0.2);
     border-radius: 10px;
     padding: 2rem;
+}
+
+.contact-form-wrapper h2,
+.contact-info-wrapper h2 {
+    margin-bottom: 1.5rem;
+    color: var(--light-blue);
+    text-align: center;
 }
 
 .form-group {
@@ -117,6 +130,53 @@
     outline: none;
     border-color: var(--dark-blue);
     box-shadow: 0 0 10px rgba(77, 159, 236, 0.3);
+}
+
+.contact-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(77, 159, 236, 0.2);
+    color: var(--light-blue);
+    border: 1px solid rgba(77, 159, 236, 0.5);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-submit:hover {
+    background-color: rgba(77, 159, 236, 0.4);
+    box-shadow: 0 0 20px rgba(77, 159, 236, 0.5);
+}
+
+.contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-details,
+.business-hours {
+    background-color: rgba(20, 30, 50, 0.5);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.info-item,
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: var(--light-blue);
+}
+
+.info-item a {
+    color: var(--light-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-item a:hover {
+    color: var(--dark-blue);
 }
 
 /* Homepage Specific Styles */
@@ -174,4 +234,50 @@
 .service-button:hover,
 .portfolio-button:hover {
     color: var(--light-blue);
+}
+
+/* 
+   We'll reuse the same keyframes & styling 
+   from .gradient-text, but apply it to .gradient-badge 
+   for the "Most Popular" text. 
+*/
+
+/* Use the same animation as in components.css */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Make the "Most Popular" text a bright, desert-titanium-infused gradient */
+.gradient-badge {
+    background-color: transparent !important;
+    color: transparent !important;
+    border: none !important;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #cde5ff 25%,
+        #8cbfff 50%,
+        #4d9fec 75%,
+        #d2c6b8 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Exponential multi-layer glow */
+    text-shadow:
+        0 0 3px   rgba(255, 255, 255, 0.8),
+        0 0 6px   rgba(140, 191, 255, 0.7),
+        0 0 12px  rgba(77, 159, 236, 0.6),
+        0 0 24px  rgba(210, 198, 184, 0.4),
+        0 0 48px  rgba(210, 198, 184, 0.2);
+
+    animation: gradientMove 15s linear infinite;
 }
