@@ -1,0 +1,177 @@
+/* Services Section */
+.services-section,
+.pricing-section,
+.contact-section,
+.portfolio-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.services-grid,
+.pricing-grid,
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-item,
+.pricing-tier,
+.portfolio-item {
+    background-color: rgba(30, 40, 70, 0.5);
+    border: 1px solid rgba(77, 159, 236, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover,
+.pricing-tier:hover,
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(77, 159, 236, 0.2);
+}
+
+.service-item h3,
+.pricing-tier h3,
+.portfolio-item h3 {
+    color: var(--light-blue);
+    margin-bottom: 1rem;
+}
+
+/* Pricing Specific Styles */
+.pricing-tier {
+    position: relative;
+}
+
+.featured {
+    border: 2px solid rgba(77, 159, 236, 0.5);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dark-blue);
+    color: var(--black);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.pricing-amount {
+    margin: 1rem 0;
+}
+
+.price {
+    font-size: 2.5rem;
+    color: var(--light-blue);
+    font-weight: bold;
+}
+
+/* Contact Page Styles */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-form-wrapper,
+.contact-info-wrapper {
+    background-color: rgba(30, 40, 70, 0.5);
+    border: 1px solid rgba(77, 159, 236, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--light-blue);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgba(20, 30, 50, 0.7);
+    border: 1px solid rgba(77, 159, 236, 0.3);
+    border-radius: 6px;
+    color: var(--light-blue);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--dark-blue);
+    box-shadow: 0 0 10px rgba(77, 159, 236, 0.3);
+}
+
+/* Homepage Specific Styles */
+.services-overview,
+.projects-preview,
+.cta-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.services-grid,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card,
+.project-card {
+    background-color: rgba(30, 40, 70, 0.5);
+    border: 1px solid rgba(77, 159, 236, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-card:hover,
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(77, 159, 236, 0.2);
+}
+
+.service-card h3,
+.project-card h3 {
+    margin-bottom: 1rem;
+    color: var(--light-blue);
+}
+
+.service-button,
+.portfolio-button {
+    margin-top: auto;
+    align-self: center;
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.service-button:hover,
+.portfolio-button:hover {
+    color: var(--light-blue);
+}

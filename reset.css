@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --light-blue: #A5D8FF;
+    --dark-blue: #4D9FEC;
+    --deep-blue: #1A1A3A;
+    --background-dark: #0A0A1A;
+    --accent-blue: #00BFFF;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+        background-size: 200% 200%;
+    }
+    50% {
+        background-position: 100% 50%;
+        background-size: 300% 300%;
+    }
+    100% {
+        background-position: 0% 50%;
+        background-size: 200% 200%;
+    }
+}

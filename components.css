@@ -1,0 +1,60 @@
+.hero {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--dark-blue);
+}
+
+.cta-button, 
+.contact-submit, 
+.portfolio-button, 
+.service-button, 
+.pricing-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: rgba(77, 159, 236, 0.2);
+    color: var(--light-blue);
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid rgba(77, 159, 236, 0.5);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cta-button:hover, 
+.contact-submit:hover, 
+.portfolio-button:hover, 
+.service-button:hover, 
+.pricing-button:hover {
+    background-color: rgba(77, 159, 236, 0.4);
+    box-shadow: 0 0 20px rgba(77, 159, 236, 0.5);
+}
+
+.service-features,
+.pricing-features {
+    list-style-type: none;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.service-features li,
+.pricing-features li {
+    color: rgba(165, 216, 255, 0.7);
+    padding: 0.3rem 0;
+    position: relative;
+}
